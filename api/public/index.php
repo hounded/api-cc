@@ -24,16 +24,25 @@ if ($debug) {
     Debug::enable();
 }
 
+$kernel = new Kernel($env, $debug);
+$request = Request::createFromGlobals();
+
 if ($trustedProxies = $_SERVER['TRUSTED_PROXIES'] ?? false) {
-    Request::setTrustedProxies(explode(',', $trustedProxies), Request::HEADER_X_FORWARDED_ALL);
+//    Request::setTrustedProxies(explode(',', $trustedProxies), Request::HEADER_X_FORWARDED_ALL);
+    Request::setTrustedProxies(
+    // trust *all* requests
+        array('127.0.0.1', $request->server->get('REMOTE_ADDR')),
+
+        // if you're using ELB, otherwise use a constant from above
+        Request::HEADER_X_FORWARDED_AWS_ELB
+    );
 }
 
 if ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? false) {
     Request::setTrustedHosts(explode(',', $trustedHosts));
 }
 
-$kernel = new Kernel($env, $debug);
-$request = Request::createFromGlobals();
+
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
