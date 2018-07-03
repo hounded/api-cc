@@ -31,7 +31,7 @@ const Welcome = () => (
                 <div className="main__before-starting">
                     <p>
                         This container will host your <b>Progressive Web App</b>{' '}
-                        ({'http:' === document.location.protocol ? <a href="https://localhost">HTTPS</a> : <a href="http://localhost">HTTP</a>}).
+                        ({'http:' === document.location.protocol ? <a href="https://35.189.61.222">HTTPS</a> : <a href="http://35.189.61.222">HTTP</a>}).
                         Learn how to create your first API and generate a PWA:
                     </p>
                     <a
@@ -52,17 +52,17 @@ const Welcome = () => (
                         <div className="other__content">
                             <h3>API</h3>
                             <ButtonsGroup
-                                // httpLink="http://localhost:8080/api"
-                                httpLink="http://localhost:8080"
-                                // httpsLink="https://localhost:8443/api"
-                                httpsLink="https://localhost:8443"
+                                // httpLink="http://35.189.61.222:8080/api"
+                                httpLink="http://35.189.61.222:8080"
+                                // httpsLink="https://35.189.61.222:8443/api"
+                                httpsLink="https://35.189.61.222:8443"
                             />
                             <h3>Cached API</h3>
                             <ButtonsGroup
-                                // httpLink="http://localhost:8081/api"
-                                httpLink="http://localhost:8081"
-                                // httpsLink="https://localhost:8444/api"
-                                httpsLink="https://localhost:8444"
+                                // httpLink="http://35.189.61.222:8081/api"
+                                httpLink="http://35.189.61.222:8081"
+                                // httpsLink="https://35.189.61.222:8444/api"
+                                httpsLink="https://35.189.61.222:8444"
                             />
                         </div>
                     </div>
@@ -73,8 +73,8 @@ const Welcome = () => (
                         <div className="other__content">
                             <h3>Admin</h3>
                             <ButtonsGroup
-                                httpLink="http://localhost:81"
-                                httpsLink="https://localhost:444"
+                                httpLink="http://35.189.61.222:81"
+                                httpsLink="https://35.189.61.222:444"
                             />
                         </div>
                     </div>
