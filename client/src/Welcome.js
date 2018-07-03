@@ -31,7 +31,7 @@ const Welcome = () => (
                 <div className="main__before-starting">
                     <p>
                         This container will host your <b>Progressive Web App</b>{' '}
-                        ({'http:' === document.location.protocol ? <a href="https://35.186.236.117">HTTPS</a> : <a href="http://35.186.236.117">HTTP</a>}).
+                        ({'http:' === document.location.protocol ? <a href="https://offthegrind.co.nz">HTTPS</a> : <a href="http://offthegrind.co.nz">HTTP</a>}).
                         Learn how to create your first API and generate a PWA:
                     </p>
                     <a
@@ -52,17 +52,17 @@ const Welcome = () => (
                         <div className="other__content">
                             <h3>API</h3>
                             <ButtonsGroup
-                                // httpLink="http://35.186.236.117:8080/api"
-                                httpLink="http://35.186.236.117:8080"
-                                // httpsLink="https://35.186.236.117:8443/api"
-                                httpsLink="https://35.186.236.117:8443"
+                                // httpLink="http://offthegrind.co.nz:8080/api"
+                                httpLink="http://offthegrind.co.nz:8080"
+                                // httpsLink="https://offthegrind.co.nz:8443/api"
+                                httpsLink="https://offthegrind.co.nz:8443"
                             />
                             <h3>Cached API</h3>
                             <ButtonsGroup
-                                // httpLink="http://35.186.236.117:8081/api"
-                                httpLink="http://35.186.236.117:8081"
-                                // httpsLink="https://35.186.236.117:8444/api"
-                                httpsLink="https://35.186.236.117:8444"
+                                // httpLink="http://offthegrind.co.nz:8081/api"
+                                httpLink="http://offthegrind.co.nz:8081"
+                                // httpsLink="https://offthegrind.co.nz:8444/api"
+                                httpsLink="https://offthegrind.co.nz:8444"
                             />
                         </div>
                     </div>
@@ -73,8 +73,8 @@ const Welcome = () => (
                         <div className="other__content">
                             <h3>Admin</h3>
                             <ButtonsGroup
-                                httpLink="http://35.186.236.117:81"
-                                httpsLink="https://35.186.236.117:444"
+                                httpLink="http://offthegrind.co.nz:81"
+                                httpsLink="https://offthegrind.co.nz:444"
                             />
                         </div>
                     </div>
