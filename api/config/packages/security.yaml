@@ -1,18 +1,54 @@
 security:
-    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        FOS\UserBundle\Model\UserInterface: bcrypt
+
+    role_hierarchy:
+        ROLE_USER: ROLE_USER
+        ROLE_ADMIN: ROLE_ADMIN
+
     providers:
-        in_memory: { memory: ~ }
+        db_provider:
+           entity:
+               class: AppBundle:User
+               property: email
+        fos_userbundle:
+           id: fos_user.user_provider.username_email
+
     firewalls:
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-        main:
-            anonymous: ~
 
-            # activate different ways to authenticate
+        admin:
+             pattern: ^/admin
+             anonymous: ~
+             form_login:
+                 provider:               fos_userbundle
+                 login_path:             /admin/login
+                 check_path:             /admin/login_check
+                 always_use_default_target_path : true
+                 default_target_path: /admin
+             logout_on_user_change: true
+             logout:
+                 path:   /logout
+                 target: /
 
-            # http_basic: ~
-            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
 
-            # form_login: ~
-            # https://symfony.com/doc/current/security/form_login_setup.html
+        login:
+              pattern:  ^/login_check
+              stateless: true
+              anonymous: true
+              provider: db_provider
+              form_login:
+                  check_path:               /login_check
+                  username_parameter: email
+                  password_parameter: password
+                  success_handler:          lexik_jwt_authentication.handler.authentication_success
+                  failure_handler:          lexik_jwt_authentication.handler.authentication_failure
+                  require_previous_session: false
+
+        api:
+              pattern:   ^/
+              stateless: true
+              anonymous: true
+              provider: db_provider
+              guard:
+                  authenticators:
+                      - lexik_jwt_authentication.jwt_token_authenticator

@@ -68,6 +68,9 @@
     "easyrdf/easyrdf": {
         "version": "0.9.1"
     },
+    "egulias/email-validator": {
+        "version": "2.1.4"
+    },
     "friendsofphp/php-cs-fixer": {
         "version": "2.2",
         "recipe": {
@@ -76,6 +79,9 @@
             "version": "2.2",
             "ref": "bb31a3bbec00a8fc8aa1c9fbf9b0ef9fc492f93d"
         }
+    },
+    "friendsofsymfony/user-bundle": {
+        "version": "v2.1.2"
     },
     "guzzlehttp/guzzle": {
         "version": "6.3.0"
@@ -89,8 +95,23 @@
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "lcobucci/jwt": {
+        "version": "3.2.2"
+    },
     "league/html-to-markdown": {
         "version": "4.6.2"
+    },
+    "lexik/jwt-authentication-bundle": {
+        "version": "2.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.5",
+            "ref": "509b1542f3180a1cfe248ade8b7bf5092c2d4127"
+        }
+    },
+    "namshi/jose": {
+        "version": "7.2.3"
     },
     "nelmio/cors-bundle": {
         "version": "1.5",
@@ -100,6 +121,9 @@
             "version": "1.5",
             "ref": "7b6cbc842f8cd3d550815247d12294f6f304a8c4"
         }
+    },
+    "paragonie/random_compat": {
+        "version": "v2.0.17"
     },
     "php-cs-fixer/diff": {
         "version": "v1.2.0"
@@ -127,6 +151,9 @@
     },
     "psr/simple-cache": {
         "version": "1.0.0"
+    },
+    "swiftmailer/swiftmailer": {
+        "version": "v6.1.1"
     },
     "symfony/asset": {
         "version": "v4.0.3"
@@ -176,6 +203,9 @@
             "ref": "cc1afd81841db36fbef982fe56b48ade6716fac4"
         }
     },
+    "symfony/form": {
+        "version": "v4.1.1"
+    },
     "symfony/framework-bundle": {
         "version": "3.3",
         "recipe": {
@@ -194,6 +224,9 @@
     "symfony/inflector": {
         "version": "v4.0.3"
     },
+    "symfony/intl": {
+        "version": "v4.1.1"
+    },
     "symfony/lts": {
         "version": "4-dev"
     },
@@ -201,6 +234,9 @@
         "version": "v4.0.3"
     },
     "symfony/polyfill-ctype": {
+        "version": "v1.8.0"
+    },
+    "symfony/polyfill-intl-icu": {
         "version": "v1.8.0"
     },
     "symfony/polyfill-mbstring": {
@@ -247,6 +283,18 @@
     },
     "symfony/stopwatch": {
         "version": "v4.0.3"
+    },
+    "symfony/swiftmailer-bundle": {
+        "version": "2.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.5",
+            "ref": "3db029c03e452b4a23f7fc45cec7c922c2247eb8"
+        }
+    },
+    "symfony/templating": {
+        "version": "v4.1.1"
     },
     "symfony/translation": {
         "version": "3.3",

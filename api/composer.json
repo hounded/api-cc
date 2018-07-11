@@ -6,11 +6,14 @@
         "ext-iconv": "*",
         "api-platform/api-pack": "^1.1",
         "api-platform/core": "^2.3",
+        "friendsofsymfony/user-bundle": "~2.0",
         "guzzlehttp/guzzle": "^6.3",
+        "lexik/jwt-authentication-bundle": "^2.5",
         "symfony/console": "^4.0",
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^4.0",
         "symfony/lts": "^4@dev",
+        "symfony/swiftmailer-bundle": "^3.2",
         "symfony/yaml": "^4.0"
     },
     "require-dev": {
